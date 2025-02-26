@@ -23,6 +23,9 @@ the Sieve algorithm).
 
 The code is slow and takes a few hours to run with the default options.
 
+There are two versions of the program: one that generate prime numbers (unsat problems)
+and one that generates products of prime (sat problems). The former was actually an attempt to produce hard SAT instances. The latter one are the really interesting scalable unsat benchmarks.
+
 ## Implementation
 
 The code is simply a generator and is not expected to run multiple

@@ -26,7 +26,7 @@ std::ostream &operator<<(std::ostream &stream, const Generate_Problem &p) {
   stream << "(set-info :smt-lib-version 2.6)\n"
   << "(set-logic QF_BV)\n"
   << "(set-option :produce-models true)\n"
-  << "(set-info :status sat)\n"
+  << "(set-info :status unsat)\n"
   << "\n"
   << "(declare-fun a () " << bitvec_type.str() << ")\n"
   << "(declare-fun c () " << bitvec_type.str() << ")\n"
@@ -41,8 +41,6 @@ std::ostream &operator<<(std::ostream &stream, const Generate_Problem &p) {
   << "\n"
   << "; ensure that there is no overflow\n"
   << "(assert (not (bvumulo c d)))\n"
-  << "; ensure that there is no overflow\n"
-  << "(assert (bvult c d))\n"
   << "(check-sat)\n"
   << "(exit)\n";
 

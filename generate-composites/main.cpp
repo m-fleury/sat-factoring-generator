@@ -96,14 +96,14 @@ int main(int argc, char *argv[]) {
           myfile.close();
 
           std::ostringstream file_name_cnf;
-          file_name_cnf << path << "/factoring-" << bitwidth + 1 << distance
+          file_name_cnf << path << "/factoring-" << bitwidth + 1 << "-" << distance
                         << "-" << first_prime << "x" << second_prime << ".cnf";
-          // std::cout << file_name_cnf.str() << "\n";
+          std::cout << file_name_cnf.str() << "\n";
 
-          // const std::string bitwuzla =
-          //     "/home/fleury/bin/bitwuzla --dump-dimacs " + file_name.str() +
-          //     " > " + file_name_cnf.str();
-          // std::system(bitwuzla.c_str());
+          const std::string bitwuzla =
+               "/home/fleury/bin/bitwuzla --dump-dimacs " + file_name.str() +
+               " > " + file_name_cnf.str();
+          std::system(bitwuzla.c_str());
           break;
         } else {
           first_prime = second_prime;
