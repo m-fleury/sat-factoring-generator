@@ -15,7 +15,7 @@ all: compile
 	$(CXX) $(CXXFLAGS) -c $<
 
 main: main.cpp $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o factoring-bench $^ -lboost_program_options 
+	$(CXX) $(CXXFLAGS) -o factoring-bench $^
 
 compile: main
 
