@@ -3,7 +3,7 @@
 ## Presentation
 
 In a meeting with Armin Biere, Jaowei Chen, Yonathan Fisseha, Marijn
-Heule, Karem Sakallah, had the idea of the factoring benchmark family:
+Heule, Karem Sakallah, we had the idea of the factoring benchmark family:
 We take prime numbers and check whether they can be factored into a
 product of two numbers.
 
